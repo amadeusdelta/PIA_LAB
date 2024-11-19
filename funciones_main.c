@@ -154,7 +154,9 @@ void busqueda_y_edicion()
             {
                 if (strcmp(pacientes[i].nombre, nombre) == 0)
                 {
+                    printf("\n==============================================\n\n");
                     imprimir_paciente(pacientes[i]);
+                    printf("\n==============================================\n\n");
                     flag = 1;
                     break;
                 }
@@ -171,7 +173,9 @@ void busqueda_y_edicion()
             {
                 if (pacientes[i].num_registro == num_registro)
                 {
+                    printf("\n==============================================\n\n");
                     imprimir_paciente(pacientes[i]);
+                    printf("\n==============================================\n\n");
                     flag = 1;
                     break;
                 }
