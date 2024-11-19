@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-// Define la variable global null_paciente
+
 struct Paciente null_paciente = {"", "", "", -1, '\0', -1, -1, -1};
 
-/*Funciones generales usadas por las funciones principales*/
 
-// Obtiene el numero de pacientes en registros.txt desde extra.txt
+
+
 int obtener_num_pacientes()
 {
     FILE *f;
@@ -41,7 +41,7 @@ int obtener_num_pacientes()
     return num_pacientes;
 }
 
-// Imprime el paciente a pantalla
+
 void imprimir_paciente(struct Paciente paciente)
 {
 
@@ -72,7 +72,7 @@ void imprimir_paciente(struct Paciente paciente)
     printf("Consultorio: %d\n", paciente.consultorio);
 }
 
-// leer pacientes de archivo
+
 struct Paciente *leer_pacientes()
 {
     FILE *f;
@@ -109,7 +109,7 @@ struct Paciente *leer_pacientes()
     return pacientes;
 }
 
-/*Llenado de estructura*/
+
 struct Paciente obtener_paciente_nuevo()
 {
     int opc;
@@ -192,14 +192,14 @@ struct Paciente obtener_paciente_nuevo()
     return paciente;
 }
 
-/*Copia estructura en archivo*/
+
 int escribir_paciente_nuevo(struct Paciente paciente, FILE *f)
 {
     FILE *extra;
 
     int num_pacientes = obtener_num_pacientes();
 
-    // Se actualiza el numero de pacientes en extra
+    
     if ((extra = fopen("extra.txt", "w")) == NULL)
     {
         printf("Hubo un error al abrir el archivo");

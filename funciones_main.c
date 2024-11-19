@@ -6,11 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-/*
-Funciones principales usadas en el switch del programa principal
-*/
 
-/*ALTA DE PACIENTES*/
 void alta_paciente()
 {
     printf("");
@@ -27,7 +23,7 @@ void alta_paciente()
     fclose(f);
 }
 
-/*BUSQUEDA O EDICION DE PACIENTES*/
+
 void busqueda_y_edicion()
 {
     int opc1, opc2, flag = 0;
@@ -191,7 +187,7 @@ void busqueda_y_edicion()
     }
 }
 
-/*LISTADO DE PACIENTES*/
+
 void imprimir_pacientes()
 {
     int num_pacientes = obtener_num_pacientes();
@@ -222,7 +218,7 @@ void imprimir_pacientes()
     free(pacientes);
 }
 
-/*BAJA DE PACIENTES*/
+
 void baja_paciente()
 {
     int num_pacientes = obtener_num_pacientes();
@@ -290,7 +286,7 @@ void baja_paciente()
                 {
                     pacientes[i].num_registro = pacientes[i].num_registro - 1;
                 }
-                // Este es el problema dentro del codigo
+                
                 escribir_paciente_nuevo(pacientes[i], temporal);
             }
             else
@@ -324,7 +320,7 @@ void baja_paciente()
         return;
     }
 
-    // Se corrige el número de pacientes
+    
     if ((extra = fopen("extra.txt", "r+")) == NULL)
     {
         printf("Hubo un error al abrir extra.txt, retornando.\n");
